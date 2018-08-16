@@ -2,7 +2,7 @@
 ### Cloned from https://github.com/binoy14/static-website-webpack-boilerplate
 ### Credits: Binoy Patel
 
-## Modified Basic Static Boilerplate:
+# Modified Basic Static Boilerplate:
 
 #### As of 05/15/2018
 - Webpack
@@ -19,7 +19,7 @@ Clone the repo
 git clone https://github.com/lindajzhao/static-website-webpack-boilerplate.git
 ```
 
-Run script to start devlopment
+Run script to start development
 ```
 npm run start
 ```
