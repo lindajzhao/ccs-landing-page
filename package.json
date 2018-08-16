@@ -1,6 +1,6 @@
 {
-  "name": "static-website-webpack-boilerplate",
-  "version": "0.0.1",
+  "name": "static-webpack-boilerplate",
+  "version": "0.0.2",
   "description": "Static website boilerplate using webpack and bootstrap",
   "main": "bundle.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "static",
     "website"
   ],
-  "author": "Binoy Patel",
+  "author": "Linda Zhao",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -35,8 +35,6 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.6.3",
-    "jquery": "^3.1.0"
+    "font-awesome": "^4.6.3"
   }
 }
