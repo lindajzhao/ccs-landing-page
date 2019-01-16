@@ -1,6 +1,46 @@
+// Color scheme
+$blue1: #55dde0;
+$blue2: #33658a;
+$blue3: #2f4858;
+$accent1: #f6ae2d;
+$accent2: #f26419;
+
+// Sizes
+$menuHeight: 50px;
+
 body {
-	background-color: #607d8b;
+  
 }
-.jumbotron {
-	background-color: #cfd8dc;
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.img__logo {
+  width: 200px;
+}
+
+.mainNav {
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: $blue3;
+  height: $menuHeight;
+}
+
+.mainSection {
+  margin-top: $menuHeight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100% - ( #{$menuHeight} * 2 ));
+}
+
+footer {
+  background: orange;
+  width: 100%;
 }
