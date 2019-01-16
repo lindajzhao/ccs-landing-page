@@ -7,7 +7,10 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	context: path.resolve('./app'),
-	entry: './js/index.js',
+	entry: {
+		index: './js/index.js',
+		privacy: './js/privacy.js',
+	},
 	output: {
 		path: path.resolve('./dist/'),
 		filename: 'js/bundle.js',
@@ -44,8 +47,17 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({
-			template: './index.html'
+		new HtmlWebpackPlugin({			
+			template: './index.html',
+			inject: true,
+			chunks: ['index'],
+			filename: 'index.html'
+		}),
+		new HtmlWebpackPlugin({			
+			template: './privacy.html',
+			inject: true,
+			chunks: ['privacy'],
+			filename: 'privacy.html'
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
