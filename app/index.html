@@ -11,28 +11,37 @@
 	<body>
 		<header>
 			<nav class="mainNav">
-				<img src="#" alt="Ribbon Logo">
-				<div class="nav__links">
-					<a href="#">Contact</a>
+				<div class="menu__wrapper">
+					<a href="./index.html">
+						<img src="./img/ribbon-logo-blue.png" class="mainNav__logo" alt="Ribbon Logo">
+					</a>
+					<div class="nav__links">
+						<a href="#contactSection" class="mainNav__link">Contact</a>
+					</div>
 				</div>
 			</nav>
 		</header>
 	
-		<main class="wrapper mainSection">
-			<img src="./img/ccs-logo.png" alt="Childhood Cancer Canada Logo" class="img__logo">
-			<h1>Coming Soon - Spring 2019</h1>
-			<h2>We Know You’re Waiting...</h2>
-			<p>In the meantime, why not sign up to our mailing list to receive updates about our launch?</p>
-			
-			<a href="#" class="ctaBtn">Sign up</a>
-			
-			<p>Have a comment, question or suggestion? We would love to hear from you.</p>
-			<a href="#" class="ctaBtn">Contact us</a>
+		<main>
+			<div class="wrapper mainSection">
+				<img src="./img/ccs-logo.png" alt="Childhood Cancer Canada Logo" class="img__logo">
+				<h1 class="type__h1">Coming Soon - Spring 2019</h1>
+				<h2 class="type__h2">We Know You’re Waiting...</h2>
+				<p class="type__text">In the meantime, why not sign up to our mailing list to receive updates about our launch?</p>
+				<!-- TODO: GoCanvas link -->
+				<a href="#" class="ctaBtn">Sign up</a>
+				
+				<p class="type__text">Have a comment, question or suggestion? We would love to hear from you.</p>
+				<!-- TODO: Form (portfolio?) -->
+				<a href="#" class="ctaBtn" id="contactSection">Contact us</a>
+			</div>
 		</main>		
 				
 		<footer>
-			<a href="./privacy.html">Privacy Policy</a>
-			<p>© 2019 Childhood Cancer Survivor Canada</p>
+			<div class="menu__wrapper">
+				<a href="./privacy.html" class="footer__link">Privacy Policy</a>
+				<p class="footer__text">© 2019 Childhood Cancer Survivor Canada</p>
+			</div>
 		</footer>
 	</body>
 </html>

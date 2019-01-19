@@ -19,17 +19,47 @@ $bodyFont: "Roboto", sans-serif;
 /* 
 * Typography
 */
+* {
+  font-size: 16px;
+}
+
 h1, h2, a {
   font-family: $headingFont;
+  margin: 0;
 }
+
 
 p, span {
   font-family: $bodyFont;
+  margin: 0;
+}
+
+.type__h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.type__h2 {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+
+.type__text {
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 /* 
 * Layout
 */
+$topGradientColor: $blue1;
+$botGradientColor: lighten($blue1, 30%);
+main {
+  // Background
+  background: linear-gradient($topGradientColor, $botGradientColor)
+}
+
 .wrapper {
   width: 80%;
   max-width: 1200px;
@@ -37,7 +67,8 @@ p, span {
 }
 
 .img__logo {
-  width: 200px;
+  width: 300px;
+  margin: 10vh 0;
 }
 
 .mainNav {
@@ -45,7 +76,7 @@ p, span {
   position: absolute;
   top:0;
   left:0;
-  background: $blue3;
+  background: $accent1;
   height: $menuHeight;
 }
 
@@ -58,15 +89,26 @@ p, span {
   min-height: calc(100% - ( #{$menuHeight} * 2 ));
 }
 
-footer {
-  background: orange;
-  width: 100%;
-}
-
 /* 
 * Buttons/links
 */
+@mixin highlight($width) {
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		position: absolute;
+		width: $width;
+		height: 8px;
+		background: yellow;
+		top: 14px;
+		left: 4px;
+		z-index: -1;
+	}
+}
+
 .ctaBtn {
+  // @include highlight(35px)
   display: block;
   padding: 10px 15px;
   border:1px solid $accent2;
@@ -76,4 +118,46 @@ footer {
   align-items: center;
   color: black;
   text-decoration: none;
+  margin-bottom: 80px;
+}
+
+/*
+* Navigation
+*/
+.menu__wrapper {
+  @extend .wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mainNav__logo {
+  width: 30px;
+  height: 30px;
+}
+
+.mainNav__link {
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+}
+
+/*
+* Footer
+*/
+footer {
+  background: $botGradientColor;
+  width: 100%;
+  height: $menuHeight;
+}
+
+.footer__link {
+  font-size: 12px;
+}
+
+.footer__text {
+  font-size: 12px;
 }
